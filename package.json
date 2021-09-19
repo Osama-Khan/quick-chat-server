@@ -1,0 +1,24 @@
+{
+  "name": "quick-chat-server",
+  "version": "0.1.0",
+  "description": "Server for a sample chat app utilizing socket.io, QuickChat.",
+  "keywords": [
+    "socket.io",
+    "node"
+  ],
+  "author": "Osama Khan",
+  "main": "app.js",
+  "dependencies": {
+    "@types/socket.io-client": "^3.0.0",
+    "dotenv": "^10.0.0",
+    "socket.io": "^4.2.0",
+    "socket.io-client": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "start:dev": "nodemon app.js",
+    "start": "node app.js"
+  }
+}
