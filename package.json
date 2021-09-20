@@ -9,10 +9,8 @@
   "author": "Osama Khan",
   "main": "app.js",
   "dependencies": {
-    "@types/socket.io-client": "^3.0.0",
     "dotenv": "^10.0.0",
-    "socket.io": "^4.2.0",
-    "socket.io-client": "^4.2.0"
+    "socket.io": "^4.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
