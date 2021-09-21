@@ -1,4 +1,5 @@
 import { Server } from "socket.io";
+import { events, onConnectEvent } from "./Events";
 
 /** Creates a QuickChat server
  * @param port Port number to serve at
@@ -10,4 +11,6 @@ export function createServer(port: number, clientUrl: string): void {
       origin: [clientUrl],
     },
   });
+
+  io.on(events.onConnect, (socket) => onConnectEvent(io, socket));
 }
