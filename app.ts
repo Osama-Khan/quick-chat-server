@@ -1,3 +1,4 @@
+import { createServer } from "./app/index";
 import env from "dotenv";
 
 // Set up the environment
@@ -8,3 +9,6 @@ if (!process.env.PORT || !process.env.CLIENT_URL) {
     "Please set environment variables in .env file. Rename .env.example to .env for default settings."
   );
 }
+
+// Serve
+createServer(parseInt(process.env.PORT), process.env.CLIENT_URL);
