@@ -12,9 +12,9 @@ import {
  * @param socket The socket of the connection
  */
 export function onConnectEvent(server: Server, socket: Socket) {
-  socket.on(events.onSendMessage, (message) =>
-    onSendMessageEvent(server, socket, message)
-  );
+  socket.on(events.onSendMessage, (message, roomId) => {
+    onSendMessageEvent(socket, message, roomId);
+  });
   socket.on(events.onJoinRoom, (id) => {
     onJoinRoomEvent(socket, id);
   });
