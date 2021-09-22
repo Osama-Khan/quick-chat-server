@@ -7,4 +7,9 @@ export const events = {
   onConnect: "connection",
   onSendMessage: "sendMessage",
   onReceiveMessage: "receiveMessage",
+  onJoinRoom: "joinRoom",
+  onJoinedRoom: "joinedRoom",
+  onCreateRoom: "createRoom",
+  onLeaveRoom: "leaveRoom",
+  onLeftRoom: "leftRoom",
 };
