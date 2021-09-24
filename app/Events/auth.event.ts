@@ -65,7 +65,16 @@ export function emitLoginFailedEvent(socket: Socket, message: string) {
  * @param socket The socket of the connection
  * @param user Object containing username, password and profile (picture link) of the user
  */
-export function onRegisterEvent(socket: Socket, user: Omit<UserType, "_id">) {
+export async function onRegisterEvent(
+  socket: Socket,
+  user: Omit<UserType, "_id">
+) {
+  const u = await userService.findOne({ name: user.name });
+  if (u) {
+    emitRegisterFailedEvent(socket, "User already exists!");
+    return;
+  }
+
   userService
     .insert(user)
     .then((res) => {
