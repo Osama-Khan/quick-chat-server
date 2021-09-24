@@ -16,5 +16,5 @@ export function createServer(port: number, clientUrl: string): void {
     },
   });
 
-  io.on(events.onConnect, (socket) => onConnectEvent(io, socket));
+  io.on(events.onConnect, onConnectEvent);
 }
