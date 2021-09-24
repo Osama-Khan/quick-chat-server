@@ -1,4 +1,12 @@
 import { onConnectEvent } from "./Connection.event";
+import {
+  onLoginEvent,
+  emitLoginSuccessEvent,
+  emitLoginFailedEvent,
+  onRegisterEvent,
+  emitRegisterSuccessEvent,
+  emitRegisterFailedEvent,
+} from "./auth.event";
 import { onSendMessageEvent, emitReceiveMessageEvent } from "./message.event";
 import {
   onJoinRoomEvent,
@@ -10,6 +18,12 @@ import {
 
 export {
   onConnectEvent,
+  onLoginEvent,
+  emitLoginSuccessEvent,
+  emitLoginFailedEvent,
+  onRegisterEvent,
+  emitRegisterSuccessEvent,
+  emitRegisterFailedEvent,
   onSendMessageEvent,
   emitReceiveMessageEvent,
   onJoinRoomEvent,
